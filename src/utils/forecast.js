@@ -10,7 +10,7 @@ const forecast = (lat, lon ,clallback) => {
         } else if(body.message){
             clallback('Unable to find location',undefined)
         }else{
-            clallback(undefined,'It is currently '+body.current.temp+'°C. The humidity is '+body.current.humidity+'%, and the chances of rainfall is'+body.minutely.precipitation+'. It is'+body.current.weather[0].main+'with'+body.current.weather[0].description+'.')
+            clallback(undefined,'It is currently '+body.current.temp+'°C. The humidity is '+body.current.humidity+'%, and the chances of rainfall is '+body.minutely[0].precipitation+'. It is '+body.current.weather[0].main+' with '+body.current.weather[0].description+'.')
         }
     })
 }
